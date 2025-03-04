@@ -7,10 +7,20 @@ function Projects() {
     {
       duration: 0.2,
       img: "positivus",
-      hoverimg: "positivuslogo",
       nom: "Positivus",
       parag:
         "Positivus is not a project its just a design clone from figma(learning react) ",
+      git: "https://github.com/mohamedTounsi/Positivus/tree/main",
+      demo: "https://positivus-bay.vercel.app/",
+    },
+    {
+      duration: 0.4,
+      img: "rps",
+
+      nom: "RockPaperScissors",
+      parag: "this is a simple rock paper scissors game",
+      git: "https://github.com/mohamedTounsi/RockPaperScissors_",
+      demo: "https://mohamedtounsi.github.io/RockPaperScissors_/",
     },
   ];
   return (
@@ -30,6 +40,8 @@ function Projects() {
             hoverimg={item.hoverimg}
             nom={item.nom}
             parag={item.parag}
+            git={item.git}
+            demo={item.demo}
           />
         </motion.div>
       ))}
