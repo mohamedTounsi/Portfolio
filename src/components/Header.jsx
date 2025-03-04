@@ -112,7 +112,7 @@ function Header() {
           <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#00ADB5] transition-all duration-300 group-hover:w-full"></span>
         </li>
       </ul>
-      <a href="soura.jpg" download="rouge.jpg">
+      <a href="soura.jpg" download="rouge.jpg" className="hidden md:block">
         <button className="md:flex justify-center items-center gap-1.5 bg-[#00ADB5] rounded-lg pl-4 pr-3 py-2 cursor-pointer hidden text-lg hover:scale-110 transition-all duration-300 ease-in-out font-semibold  ">
           Resume
           <motion.div

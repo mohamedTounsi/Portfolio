@@ -24,7 +24,7 @@ function Aboutme() {
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amout: 0.7 }}
+        viewport={{ once: true, amout: 0.7 }}
         className="text-[#EEEEEE] md:w-5/10 w-full flex flex-col items-center text-center md:text-start md:items-start "
       >
         <p className="text-6xl font-bold leading-25">
@@ -65,7 +65,7 @@ function Aboutme() {
         variants={fadeIn("left", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amout: 0.7 }}
+        viewport={{ once: true, amout: 0.7 }}
         className="w-0  md:w-5/10  md:flex justify-center items-center hidden "
       >
         <img src="img3.png" alt="" />

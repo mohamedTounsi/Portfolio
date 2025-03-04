@@ -23,7 +23,7 @@ function Projects() {
           variants={fadeIn("up", item.duration)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amout: 0.7 }}
+          viewport={{ once: true, amout: 0.7 }}
         >
           <ProjectBox
             img={item.img}

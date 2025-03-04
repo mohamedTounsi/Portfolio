@@ -48,7 +48,7 @@ function Contactme() {
 
     if (res.success) {
       setSubmitted(true);
-      event.target.reset(); // Clear the form
+      event.target.reset();
     }
   };
 
@@ -62,7 +62,7 @@ function Contactme() {
           variants={fadeIn("right", 0.3)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.7 }}
           className="w-full flex flex-col items-center gap-5"
         >
           <div className="text-4xl lg:text-6xl font-semibold text-center lg:text-start">
@@ -78,7 +78,7 @@ function Contactme() {
           variants={fadeIn("left", 0.3)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.7 }}
           className="text-[#EEEEEE] font-semibold text-lg flex flex-col gap-5 w-full"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-7">
