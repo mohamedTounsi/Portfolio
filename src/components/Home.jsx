@@ -44,15 +44,8 @@ function Home() {
           />
         </motion.div>
       </div>
-      <div className="w-full flex justify-between items-center mt-6">
-        <motion.div
-          variants={fadeIn("inplace", 0.3)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "0px 0px -30% 0px" }}
-          className="border w-1/5 md:w-1/6 border-[#00ADB5]"
-        ></motion.div>
-        <div className="flex justify-around items-center w-3/5 md:w-1/3">
+      <div className=" w-[80%] md:w-[90%] mx-auto flex justify-center  items-center mt-6">
+        <div className="flex justify-center items-center gap-4 md:gap-16 ">
           {[
             {
               href: "https://www.facebook.com/mohamed.tounsi.583",
@@ -85,13 +78,6 @@ function Home() {
             </motion.a>
           ))}
         </div>
-        <motion.div
-          variants={fadeIn("inplace", 0.3)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "0px 0px -30% 0px" }}
-          className="border w-1/5 md:w-1/6 border-[#00ADB5]"
-        ></motion.div>
       </div>
     </div>
   );
