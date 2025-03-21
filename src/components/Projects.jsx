@@ -6,7 +6,7 @@ import { fadeIn } from "../variants";
 function Projects() {
   const data = [
     {
-      duration: 0.6,
+      duration: 0.3,
       img: "caravana",
       nom: "CaravanaTn",
       parag: "CaravanaTN is where you can find camping events in Tunisia",
@@ -14,7 +14,7 @@ function Projects() {
       demo: "https://caravana-nu.vercel.app/",
     },
     {
-      duration: 0.2,
+      duration: 0.6,
       img: "positivus",
       nom: "Positivus",
       parag:
@@ -23,7 +23,7 @@ function Projects() {
       demo: "https://positivus-bay.vercel.app/",
     },
     {
-      duration: 0.4,
+      duration: 0.9,
       img: "rps",
       nom: "RockPaperScissors",
       parag: "This is a simple rock-paper-scissors game using HTML and CSS",
