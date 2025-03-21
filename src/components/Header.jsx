@@ -60,7 +60,7 @@ function Header() {
   };
 
   return (
-    <div className="text-[#EEEEEE] flex justify-between items-center w-[87%] md:w-[80%] lg:w-[40%] mx-auto pt-5 mb-24 ">
+    <div className="text-[#EEEEEE] flex justify-between items-center w-[87%] md:w-[80%] lg:w-[50%] mx-auto pt-5 mb-24 ">
       <p className="font-bold text-6xl text-[#00ADB5] cursor-pointer ">MT.</p>
       <div className="md:hidden mr-[10px]">
         <button className="text-[#00ADB5] cursor-pointer" onClick={toggleMenu}>
@@ -82,7 +82,7 @@ function Header() {
         </button>
       </div>
 
-      <ul className="hidden md:flex md:justify-between md:items-center gap-[20px] whitespace-nowrap ">
+      <ul className="hidden md:flex md:justify-between md:items-center gap-[20px] whitespace-nowrap text-xl ">
         <li
           className="cursor-pointer relative group  "
           onClick={handleScrollToAboutme}

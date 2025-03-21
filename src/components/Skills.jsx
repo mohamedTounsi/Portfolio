@@ -1,36 +1,53 @@
 import React from "react";
 import SkillBox from "./SkillBox";
+import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-
 function Skills() {
   const data = [
-    { duration: 0.1, icon: "html2", lang: "HTML" },
-    { duration: 0.3, icon: "css2", lang: "CSS" },
-    { duration: 0.5, icon: "javascript", lang: "Javascript" },
-    { duration: 0.7, icon: "react2", lang: "React.JS" },
-    { duration: 0.9, icon: "tailwind", lang: "Tailwind" },
-    { duration: 1.1, icon: "python", lang: "Python" },
-    { duration: 1.2, icon: "git", lang: "Git" },
-    { duration: 1.5, icon: "figma", lang: "Figma" },
+    { icon: "html2", lang: "HTML" },
+    { icon: "css2", lang: "CSS" },
+    { icon: "javascript", lang: "Javascript" },
+    { icon: "react2", lang: "React.JS" },
+    { icon: "tailwind", lang: "Tailwind" },
+    { icon: "python", lang: "Python" },
+    { icon: "git", lang: "Git" },
+    { icon: "figma", lang: "Figma" },
   ];
+
   return (
-    <div
+    <motion.div
+      variants={fadeIn("inplace", 0.5)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: true, margin: "0px 0px -30% 0px" }}
       id="skills"
-      className="w-[90%] md:w-full lg:w-[70%] mx-auto grid grid-cols-2 md:grid-cols-4  gap-10 mb-15  "
+      className="w-full pb-10 "
     >
-      {data.map((item) => (
-        <motion.div
-          variants={fadeIn("up", item.duration)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amout: 0.7 }}
-          className="flex justify-center items-center"
-        >
-          <SkillBox icon={item.icon} lang={item.lang} />
-        </motion.div>
-      ))}
-    </div>
+      <div className="w-full mx-auto relative overflow-hidden">
+        <Marquee gradient={false} speed={100} className="py-4">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className="mx-4 flex items-center space-x-2  text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <SkillBox icon={item.icon} lang={item.lang} />
+            </div>
+          ))}
+        </Marquee>
+
+        {/* Fading effect using mask-image */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            maskImage:
+              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%)",
+          }}
+        ></div>
+      </div>
+    </motion.div>
   );
 }
 

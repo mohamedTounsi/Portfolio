@@ -3,10 +3,14 @@ import { BiCodeAlt } from "react-icons/bi";
 
 function ProjectBox({ img, git, demo, nom, parag }) {
   return (
-    <div className="p-6 rounded-lg flex flex-col gap-5 group cursor-pointer bg-transparent border border-[#393E46]">
-      <div className="overflow-hidden rounded-lg">
+    <div className="p-6 rounded-lg flex flex-col gap-5 group cursor-pointer bg-transparent border shadow-2xl border-[#393E46] transition-all duration-300 ease-in-out transform group-hover:scale-105 group-hover:brightness-100">
+      <div className="overflow-hidden rounded-lg relative">
         <a href={demo} target="_blank" rel="noopener noreferrer">
-          <img src={`${img}.png`} alt="" className="rounded-lg" />
+          <img
+            src={`${img}.png`}
+            alt=""
+            className="rounded-lg shadow-2xl transition-all duration-300 ease-in-out"
+          />
         </a>
       </div>
       <div className="text-[#EEEEEE]">

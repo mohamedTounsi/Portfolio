@@ -2,86 +2,96 @@ import React from "react";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import Lottie from "lottie-react";
+import home from "../home1.json";
 
 function Home() {
   return (
-    <div className="mb-15" id="home">
-      <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-center w-full  md:w-[90%] xl:w-[80%] mx-auto mb-10">
+    <div className="mb-15 " id="home">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full md:w-[90%] xl:w-[75%] mx-auto mb-10 gap-6">
         <motion.div
-          variants={fadeIn("right", 0.2)}
+          variants={fadeIn("inplace", 0.3)}
           initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amout: 0.7 }}
-          className="w-full md:w-7/10 text-[#EEEEEE] order-2 md:order-1"
+          whileInView="show"
+          viewport={{ once: true, margin: "0px 0px -30% 0px" }}
+          className="w-full md:w-1/2 text-[#EEEEEE] order-2 md:order-1"
         >
-          <p className="text-2xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-8 text-center md:text-start   ">
+          <p className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-center md:text-start px-2 md:px-0">
             HELLO I'AM <span className="text-[#00ADB5]">TOUNSI MOHAMED</span>
             <br />
-            <div className="flex justify-center md:justify-start">
+            <span className="flex justify-center md:justify-start text-gray-500 ">
               <ReactTyped
-                className=""
                 strings={["STUDENT", "FRONTEND DEVELOPER", "FREELANCER"]}
                 typeSpeed={40}
                 backSpeed={50}
-                attr="placeholder"
                 loop
-              >
-                <input
-                  type="text"
-                  className="text-center md:text-start w-full bg-transparent outline-none"
-                />
-              </ReactTyped>
-            </div>
+              />
+            </span>
             <br />
             BASED IN <span className="text-[#00ADB5]">TUNISIA</span>
           </p>
         </motion.div>
         <motion.div
-          variants={fadeIn("left", 0.2)}
+          variants={fadeIn("inplace", 0.3)}
           initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amout: 0.7 }}
-          className="w-5/10 md:w-3/10 order-1 md:order-2"
+          whileInView="show"
+          viewport={{ once: true, margin: "0px 0px -30% 0px" }}
+          className="w-full md:w-1/2 flex justify-center order-1 md:order-2"
         >
-          <img src="illustration1.png" />
+          <Lottie
+            animationData={home}
+            className="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto"
+          />
         </motion.div>
       </div>
-      <div className="w-full flex justify-between items-center">
-        <div className="border w-2/10  md:w-1/10 border-[#00ADB5]  "></div>
-        <div className="flex justify-around items-center w-6/10  md:w-3/10">
-          <a href="https://www.facebook.com/mohamed.tounsi.583" target="_blank">
-            <img
-              className="w-[50px] md:w-[75px] md:p-3 lg:w-[100px] cursor-pointer hover:bg-[#00ADB5] transition-all duration-500 ease-in-out rounded-2xl p-2  lg:p-5    "
-              src="facebook.png"
-              alt=""
-            />
-          </a>
-          <a href="https://www.instagram.com/mohamed__tounsii/" target="_blank">
-            <img
-              className="w-[50px] md:w-[75px] md:p-3 lg:w-[100px] cursor-pointer hover:bg-[#00ADB5] transition-all duration-300 ease-in-out rounded-2xl p-2  lg:p-5 "
-              src="instaw.png"
-              alt=""
-            />
-          </a>
-          <a href="https://github.com/mohamedTounsi" target="_blank">
-            <img
-              className="w-[50px] md:w-[75px] md:p-3 lg:w-[100px] cursor-pointer hover:bg-[#00ADB5] transition-all duration-300 ease-in-out rounded-2xl p-2  lg:p-5 "
-              src="githubw.png"
-              alt=""
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/mohamed-tounsi-541439351/"
-            target="_blank"
-          >
-            <img
-              className="w-[50px] md:w-[75px] md:p-3 lg:w-[100px] cursor-pointer hover:bg-[#00ADB5] transition-all duration-300 ease-in-out rounded-2xl p-2  lg:p-5 "
-              src="linkedin.png"
-              alt=""
-            />
-          </a>
+      <div className="w-full flex justify-between items-center mt-6">
+        <motion.div
+          variants={fadeIn("inplace", 0.3)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "0px 0px -30% 0px" }}
+          className="border w-1/5 md:w-1/6 border-[#00ADB5]"
+        ></motion.div>
+        <div className="flex justify-around items-center w-3/5 md:w-1/3">
+          {[
+            {
+              href: "https://www.facebook.com/mohamed.tounsi.583",
+              src: "facebook.png",
+            },
+            {
+              href: "https://www.instagram.com/mohamed__tounsii/",
+              src: "instaw.png",
+            },
+            { href: "https://github.com/mohamedTounsi", src: "githubw.png" },
+            {
+              href: "https://www.linkedin.com/in/mohamed-tounsi-541439351/",
+              src: "linkedin.png",
+            },
+          ].map((item, index) => (
+            <motion.a
+              key={index}
+              variants={fadeIn("inplace", 0.3 + index * 0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "0px 0px -30% 0px" }}
+              href={item.href}
+              target="_blank"
+            >
+              <img
+                className="w-25 md:w-14 lg:w-23 cursor-pointer hover:bg-[#00ADB5] transition-all duration-300 ease-in-out rounded-2xl p-2.5 md:p-3"
+                src={item.src}
+                alt="social"
+              />
+            </motion.a>
+          ))}
         </div>
-        <div className="w-2/10 md:w-6/10 border border-[#00ADB5]"></div>
+        <motion.div
+          variants={fadeIn("inplace", 0.3)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "0px 0px -30% 0px" }}
+          className="border w-1/5 md:w-1/6 border-[#00ADB5]"
+        ></motion.div>
       </div>
     </div>
   );

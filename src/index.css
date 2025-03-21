@@ -4,3 +4,37 @@ body {
   background: #222831;
   font-family: "Space Grotesk", serif;
 }
+
+.project-box {
+  position: relative;
+  border: 1px solid #393e46;
+  overflow: hidden; /* Ensure the glow doesn't overflow */
+}
+
+.project-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    50px circle at var(--x) var(--y),
+    rgba(0, 173, 181, 0.8),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+  /* Clip the glow to the border */
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  border-radius: 8px; /* Match the border radius of the parent */
+}
+
+.project-box:hover::before {
+  opacity: 1;
+}
