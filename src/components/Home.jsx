@@ -21,7 +21,7 @@ function Home() {
             <br />
             <span className="flex justify-center md:justify-start text-gray-500 ">
               <ReactTyped
-                strings={["STUDENT", "FRONTEND DEVELOPER", "FREELANCER"]}
+                strings={["FULLSTACK DEVELOPER", "STUDENT", "FREELANCER"]}
                 typeSpeed={40}
                 backSpeed={50}
                 loop
@@ -70,11 +70,19 @@ function Home() {
               href={item.href}
               target="_blank"
             >
-              <img
-                className="w-25 md:w-14 lg:w-23 cursor-pointer hover:bg-[#00ADB5] transition-all duration-300 ease-in-out rounded-2xl p-2.5 md:p-3"
-                src={item.src}
-                alt="social"
-              />
+              <div
+                className="w-14 h-14 md:w-14 md:h-14 lg:w-16 lg:h-16 cursor-pointer transition-all duration-300 ease-in-out bg-white hover:bg-[#00ADB5] rounded-2xl p-2.5 md:p-3"
+                style={{
+                  WebkitMaskImage: `url(${item.src})`,
+                  WebkitMaskRepeat: "no-repeat",
+                  WebkitMaskPosition: "center",
+                  WebkitMaskSize: "contain",
+                  maskImage: `url(${item.src})`,
+                  maskRepeat: "no-repeat",
+                  maskPosition: "center",
+                  maskSize: "contain",
+                }}
+              ></div>
             </motion.a>
           ))}
         </div>

@@ -8,10 +8,11 @@ function Projects() {
     {
       duration: 0.3,
       img: "caravana",
-      nom: "CaravanaTn",
-      parag: "CaravanaTN is where you can find camping events in Tunisia",
+      nom: "CaravanaTN",
+      parag:
+        "CaravanaTN is where you can find camping events in Tunisia (with admin dashboard and CLERK auth ) ",
       git: "#",
-      demo: "https://caravana-nu.vercel.app/",
+      demo: "https://caravana1.vercel.app/",
     },
     {
       duration: 0.6,
